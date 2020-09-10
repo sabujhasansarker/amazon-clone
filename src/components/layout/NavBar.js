@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../../image/logo.png";
-import cart from "../../image/cart.png";
-
 // scss
 import "./navbar.scss";
 
-const NavBar = () => {
+const NavBar = ({ logo, cart }) => {
   const [active, setActive] = useState(false);
 
   return (

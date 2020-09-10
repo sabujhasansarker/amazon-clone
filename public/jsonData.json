@@ -1,0 +1,46 @@
+{
+  "logo": "./image/logo.png",
+  "cart": "./image/cart.png",
+  "products": [
+    {
+      "id": 1,
+      "name": "The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback",
+      "image": "./image/product/The_Lean_Startup__How_Constant_Innovation_Creates_Radically_Successful_Businesses_Paperback.jpeg",
+      "price": 100,
+      "discount": "0",
+      "ratings": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl",
+      "image": "./image/product/product_1.jpeg",
+      "price": 100,
+      "discount": "0",
+      "ratings": 4.5
+    },
+    {
+      "id": 3,
+      "name": "Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor",
+      "image": "./image/product/Samsung_LC49RG90SSUXEN_49_(1).jpeg",
+      "price": 100,
+      "discount": "0",
+      "ratings": 4.5
+    },
+    {
+      "id": 4,
+      "name": "Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric",
+      "image": "./image/product/Amazon_Echo_(3rd_generation)___Smart_speaker_with_Alexa,_Charcoal_Fabric.jpeg",
+      "price": 100,
+      "discount": 4.5,
+      "ratings": 4.5
+    },
+    {
+      "id": 5,
+      "name": "New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)",
+      "image": "./image/product/New_Apple_iPad.jpg",
+      "price": 100,
+      "discount": 10,
+      "ratings": 4.5
+    }
+  ]
+}
