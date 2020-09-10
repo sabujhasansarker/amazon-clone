@@ -7,7 +7,7 @@
       "name": "The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback",
       "image": "./image/product/The_Lean_Startup__How_Constant_Innovation_Creates_Radically_Successful_Businesses_Paperback.jpeg",
       "price": 100,
-      "discount": "0",
+      "discount": 0,
       "ratings": 4.5
     },
     {
@@ -15,7 +15,7 @@
       "name": "Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl",
       "image": "./image/product/product_1.jpeg",
       "price": 100,
-      "discount": "0",
+      "discount": 0,
       "ratings": 4.5
     },
     {
@@ -23,7 +23,7 @@
       "name": "Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor",
       "image": "./image/product/Samsung_LC49RG90SSUXEN_49_(1).jpeg",
       "price": 100,
-      "discount": "0",
+      "discount": 0,
       "ratings": 4.5
     },
     {

@@ -1,0 +1,46 @@
+$navbar: #131921;
+$color: #ffffff;
+$F3A847: #f3a847;
+$span: #d6d6d6;
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px 20px;
+  padding: 50px 0;
+  .product {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.3);
+    .header {
+      text-align: left;
+      height: 100px;
+      p {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        span {
+          font-size: 0.6rem;
+        }
+      }
+    }
+    img {
+      width: 150px;
+      display: block;
+      margin: 0 auto;
+      height: 200px;
+    }
+    button {
+      margin-top: 30px;
+      background: $F3A847;
+      border: 0;
+      padding: 10px 10px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  }
+}

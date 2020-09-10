@@ -23,13 +23,15 @@ const App = () => {
   return (
     <Router>
       <NavBar logo={data && data.logo} cart={data && data.cart} />
-      <Switch>
-        <Route
-          exact
-          path="/"
-          component={() => <Products products={data && data.products} />}
-        />
-      </Switch>
+      <div className="container">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={() => <Products products={data && data.products} />}
+          />
+        </Switch>
+      </div>
     </Router>
   );
 };
