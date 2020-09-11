@@ -4,6 +4,9 @@ import React from "react";
 import "./product.scss";
 
 const Product = ({ product: { id, name, image, price, discount } }) => {
+  const onClick = () => {
+    console.log("hello");
+  };
   return (
     <div className="product">
       <div className="header">
@@ -14,7 +17,7 @@ const Product = ({ product: { id, name, image, price, discount } }) => {
         </p>
       </div>
       <img src={image} alt={name} />
-      <button>Add to cart</button>
+      <button onClick={onClick}>Add to cart</button>
     </div>
   );
 };

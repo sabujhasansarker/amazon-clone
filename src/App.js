@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from "react";
-
-// import data from "./jsonData.json";
-
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import NavBar from "./components/layout/NavBar";
 import Products from "./components/products/Products";
 
+// context
+import Context from "./context/Context";
+
 const App = () => {
-  const [data, setData] = useState();
+  const { getData, products, data } = useContext(Context);
+
   useEffect(() => {
-    fetch("./jsonData.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-      })
-      .catch((err) => {
-        console.log("Error Reading data " + err);
-      });
+    getData();
   }, []);
   return (
     <Router>
@@ -28,7 +21,7 @@ const App = () => {
           <Route
             exact
             path="/"
-            component={() => <Products products={data && data.products} />}
+            component={() => <Products products={products && products} />}
           />
         </Switch>
       </div>
