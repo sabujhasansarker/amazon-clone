@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import NavBar from "./components/layout/NavBar";
-import Products from "./components/products/Products";
-
 // context
 import Context from "./context/Context";
+
+import NavBar from "./components/layout/NavBar";
+import Products from "./components/products/Products";
+import Checkouts from "./components/checkout/Checkouts";
 
 const App = () => {
   const { getData } = useContext(Context);
@@ -19,6 +20,7 @@ const App = () => {
       <div className="container">
         <Switch>
           <Route exact path="/" component={Products} />
+          <Route exact path="/checkout" component={Checkouts} />
         </Switch>
       </div>
     </Router>

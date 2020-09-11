@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import Reducer from "./Reducer";
 import Context from "./Context";
-import { GET_PRODUCT, ADD_CART } from "./Type";
+import { GET_PRODUCT, ADD_CART, REMOVE_CART } from "./Type";
 
 const State = ({ children }) => {
   const initialState = {
@@ -32,9 +32,20 @@ const State = ({ children }) => {
       payload: data,
     });
   };
+
+  // remove item
+  const removeCart = (index) => {
+    // dispatch({
+    //   type: REMOVE_CART,
+    //   payload: index,
+    // });
+    console.log(index);
+  };
   const { data, products, carts } = state;
   return (
-    <Context.Provider value={{ data, products, carts, getData, addCart }}>
+    <Context.Provider
+      value={{ data, products, carts, getData, addCart, removeCart }}
+    >
       {children}
     </Context.Provider>
   );

@@ -44,11 +44,11 @@ const NavBar = () => {
             <br /> & Orders
           </h5>
         </div>
-        <div className="cart">
+        <Link to="/checkout" className="cart">
           <img src={cart} alt="" />
           <span>{carts && carts.length}</span>
           <h5>Cart</h5>
-        </div>
+        </Link>
       </nav>
     </header>
   );

@@ -4,14 +4,13 @@ import React from "react";
 import "./product.scss";
 
 const Product = ({ product, addCart }) => {
-  const { id, name, image, price, discount } = product;
-
+  let { id, name, image, price, discount } = product;
   return (
     <div className="product">
       <div className="header">
         <p>{name}</p>
         <p>
-          <b>${price - Math.floor(price / discount === 0 ? 0 : discount)}</b>
+          <b>${price}</b>
           <span> {discount !== 0 && ` (- ${discount}% discount)`}</span>
         </p>
       </div>
