@@ -8,21 +8,17 @@ import Products from "./components/products/Products";
 import Context from "./context/Context";
 
 const App = () => {
-  const { getData, products, data } = useContext(Context);
+  const { getData } = useContext(Context);
 
   useEffect(() => {
     getData();
   }, []);
   return (
     <Router>
-      <NavBar logo={data && data.logo} cart={data && data.cart} />
+      <NavBar />
       <div className="container">
         <Switch>
-          <Route
-            exact
-            path="/"
-            component={() => <Products products={products && products} />}
-          />
+          <Route exact path="/" component={Products} />
         </Switch>
       </div>
     </Router>

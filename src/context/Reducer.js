@@ -1,4 +1,4 @@
-import { GET_PRODUCT } from "./Type";
+import { GET_PRODUCT, ADD_CART } from "./Type";
 
 export default (state, action) => {
   const { type, payload } = action;
@@ -8,6 +8,11 @@ export default (state, action) => {
         ...state,
         products: payload.products,
         data: payload,
+      };
+    case ADD_CART:
+      return {
+        ...state,
+        carts: [...state.carts, payload],
       };
     default:
       return state;

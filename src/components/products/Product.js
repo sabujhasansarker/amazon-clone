@@ -3,10 +3,9 @@ import React from "react";
 // scss
 import "./product.scss";
 
-const Product = ({ product: { id, name, image, price, discount } }) => {
-  const onClick = () => {
-    console.log("hello");
-  };
+const Product = ({ product, addCart }) => {
+  const { id, name, image, price, discount } = product;
+
   return (
     <div className="product">
       <div className="header">
@@ -17,7 +16,7 @@ const Product = ({ product: { id, name, image, price, discount } }) => {
         </p>
       </div>
       <img src={image} alt={name} />
-      <button onClick={onClick}>Add to cart</button>
+      <button onClick={() => addCart(product)}>Add to cart</button>
     </div>
   );
 };

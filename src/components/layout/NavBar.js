@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // scss
 import "./navbar.scss";
+import Context from "../../context/Context";
 
-const NavBar = ({ logo, cart }) => {
+const NavBar = () => {
+  const { data, carts } = useContext(Context);
   const [active, setActive] = useState(false);
-
+  const { logo, cart } = data !== null && data;
   return (
     <header>
       <nav>
@@ -44,7 +46,7 @@ const NavBar = ({ logo, cart }) => {
         </div>
         <div className="cart">
           <img src={cart} alt="" />
-          <span>0</span>
+          <span>{carts && carts.length}</span>
           <h5>Cart</h5>
         </div>
       </nav>
