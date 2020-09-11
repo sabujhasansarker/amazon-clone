@@ -25,7 +25,7 @@ export default (state, action) => {
     case REMOVE_CART:
       return {
         ...state,
-        carts: state.carts.splice(payload, 1),
+        carts: state.carts.filter((cart, index) => index !== payload),
       };
     default:
       return state;

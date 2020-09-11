@@ -35,11 +35,11 @@ const State = ({ children }) => {
 
   // remove item
   const removeCart = (index) => {
-    // dispatch({
-    //   type: REMOVE_CART,
-    //   payload: index,
-    // });
-    console.log(index);
+    dispatch({
+      type: REMOVE_CART,
+      payload: index,
+    });
+    // console.log(index);
   };
   const { data, products, carts } = state;
   return (
