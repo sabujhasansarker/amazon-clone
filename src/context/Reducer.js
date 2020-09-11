@@ -8,11 +8,9 @@ export default (state, action) => {
         ...state,
         products: payload.products.filter((product) =>
           product.discount > 0
-            ? (product.price =
-                product.price -
-                Math.floor(
-                  product.price / product.discount === 0 ? 0 : product.discount
-                ))
+            ? (product.price = Number(
+                (product.price - product.price / product.discount).toFixed(2)
+              ))
             : product
         ),
         data: payload,
