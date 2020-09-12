@@ -8,6 +8,7 @@ import NavBar from "./components/layout/NavBar";
 import Products from "./components/products/Products";
 import Checkouts from "./components/checkout/Checkouts";
 import Alert from "./components/layout/Alert";
+import Login from "./components/auth/Login";
 
 const App = () => {
   const { getData, msg } = useContext(Context);
@@ -23,6 +24,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Products} />
           <Route exact path="/checkout" component={Checkouts} />
+          <Route exact path="/login" component={Login} />
         </Switch>
         {msg &&
           msg.map((m, index) => <Alert msg={m} index={index} key={m.id} />)}
