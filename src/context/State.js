@@ -38,12 +38,12 @@ const State = ({ children }) => {
       type: SET_MSG,
       payload: { id, msg, option },
     });
-    // setTimeout(() => {
-    //   dispatch({
-    //     type: REMOVE_MSG,
-    //     payload: id,
-    //   });
-    // }, [2000]);
+    setTimeout(() => {
+      dispatch({
+        type: REMOVE_MSG,
+        payload: id,
+      });
+    }, [2000]);
   };
 
   // add to cart
@@ -52,7 +52,7 @@ const State = ({ children }) => {
       type: ADD_CART,
       payload: data,
     });
-    msgAlert("Your item add in cart", "add");
+    msgAlert("✔️ Your item add in cart", "add");
   };
 
   // remove item
@@ -61,7 +61,7 @@ const State = ({ children }) => {
       type: REMOVE_CART,
       payload: index,
     });
-    msgAlert("Your item remove in cart", "remove");
+    msgAlert("❌ Your item remove in cart", "remove");
   };
   const { data, products, carts, msg } = state;
   return (

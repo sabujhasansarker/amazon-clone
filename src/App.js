@@ -15,6 +15,7 @@ const App = () => {
   useEffect(() => {
     getData();
   }, []);
+  console.log(msg);
   return (
     <Router>
       <NavBar />
@@ -23,7 +24,8 @@ const App = () => {
           <Route exact path="/" component={Products} />
           <Route exact path="/checkout" component={Checkouts} />
         </Switch>
-        {msg && msg.map((m) => <Alert msg={m} key={m.id} />)}
+        {msg &&
+          msg.map((m, index) => <Alert msg={m} index={index} key={m.id} />)}
       </div>
     </Router>
   );

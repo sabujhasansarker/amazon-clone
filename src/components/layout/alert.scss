@@ -1,0 +1,12 @@
+.alert {
+  padding: 1px;
+  padding-left: 23px;
+  border-radius: 5px;
+  width: 200px;
+  position: fixed;
+  top: 50%;
+  right: 40px;
+}
+.alert.remove-item {
+  background: red;
+}
