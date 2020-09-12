@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Cart = ({ cart, index, removeCart }) => {
-  const { name, image, price } = cart;
+  const { name, image, price, discount } = cart;
   return (
     <div className="cart">
       <div className="image-container">
@@ -13,6 +13,7 @@ export const Cart = ({ cart, index, removeCart }) => {
         </p>
         <p className="price">
           <b>${price}</b>
+          <span> {discount !== 0 && ` (- ${discount}% discount)`}</span>
         </p>
         <button onClick={() => removeCart(index)}>Remove Cart</button>
       </div>
