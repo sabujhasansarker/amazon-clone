@@ -1,4 +1,10 @@
-import { GET_PRODUCT, ADD_CART, REMOVE_CART } from "./Type";
+import {
+  GET_PRODUCT,
+  ADD_CART,
+  REMOVE_CART,
+  SET_MSG,
+  REMOVE_MSG,
+} from "./Type";
 
 export default (state, action) => {
   const { type, payload } = action;
@@ -24,6 +30,16 @@ export default (state, action) => {
       return {
         ...state,
         carts: state.carts.filter((cart, index) => index !== payload),
+      };
+    case SET_MSG:
+      return {
+        ...state,
+        msg: [...state.msg, payload],
+      };
+    case REMOVE_MSG:
+      return {
+        ...state,
+        msg: state.msg.filter((m) => m.id !== payload),
       };
     default:
       return state;

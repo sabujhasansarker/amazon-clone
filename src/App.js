@@ -7,9 +7,10 @@ import Context from "./context/Context";
 import NavBar from "./components/layout/NavBar";
 import Products from "./components/products/Products";
 import Checkouts from "./components/checkout/Checkouts";
+import Alert from "./components/layout/Alert";
 
 const App = () => {
-  const { getData } = useContext(Context);
+  const { getData, msg } = useContext(Context);
 
   useEffect(() => {
     getData();
@@ -22,6 +23,7 @@ const App = () => {
           <Route exact path="/" component={Products} />
           <Route exact path="/checkout" component={Checkouts} />
         </Switch>
+        {msg && msg.map((m) => <Alert msg={m} key={m.id} />)}
       </div>
     </Router>
   );
