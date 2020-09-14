@@ -4,7 +4,7 @@ import React from "react";
 import "./product.scss";
 
 const Product = ({ product, addCart }) => {
-  let { id, name, image, price, discount } = product;
+  let { id, name, image, price, discount, ratings } = product;
   return (
     <div className="product">
       <div className="header">
@@ -12,6 +12,11 @@ const Product = ({ product, addCart }) => {
         <p>
           <b>${price}</b>
           <span> {discount !== 0 && ` (- ${discount}% discount)`}</span>
+        </p>
+        <p className="rating">
+          {Array(ratings)
+            .fill()
+            .map((_, i) => "🌟")}
         </p>
       </div>
       <img src={image} alt={name} />

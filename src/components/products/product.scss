@@ -15,9 +15,12 @@ $span: #d6d6d6;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.3);
+
     .header {
       text-align: left;
-      height: 100px;
+      .rating {
+        display: block;
+      }
       p {
         margin: 0;
         padding: 0;

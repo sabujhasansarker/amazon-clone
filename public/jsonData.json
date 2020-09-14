@@ -8,7 +8,7 @@
       "image": "./image/product/The_Lean_Startup__How_Constant_Innovation_Creates_Radically_Successful_Businesses_Paperback.jpeg",
       "price": 100,
       "discount": 0,
-      "ratings": 4.5
+      "ratings": 4
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "image": "./image/product/product_1.jpeg",
       "price": 100,
       "discount": 0,
-      "ratings": 4.5
+      "ratings": 4
     },
     {
       "id": 3,
@@ -24,7 +24,7 @@
       "image": "./image/product/Samsung_LC49RG90SSUXEN_49_(1).jpeg",
       "price": 100,
       "discount": 0,
-      "ratings": 4.5
+      "ratings": 5
     },
     {
       "id": 4,
@@ -32,7 +32,7 @@
       "image": "./image/product/Amazon_Echo_(3rd_generation)___Smart_speaker_with_Alexa,_Charcoal_Fabric.jpeg",
       "price": 100,
       "discount": 4.5,
-      "ratings": 4.5
+      "ratings": 3
     },
     {
       "id": 5,
@@ -40,7 +40,7 @@
       "image": "./image/product/New_Apple_iPad.jpg",
       "price": 100,
       "discount": 10,
-      "ratings": 4.5
+      "ratings": 2
     }
   ]
 }
