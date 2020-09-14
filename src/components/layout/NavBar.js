@@ -34,8 +34,10 @@ const NavBar = () => {
         </div>
         <div className="login">
           <h5>
-            <span>Hello,Sing in</span> <br />
-            Account & Lists
+            <Link to="/login">
+              <span>Hello,Sing in</span> <br />
+              Account & Lists
+            </Link>
           </h5>
         </div>
         <div className="return">

@@ -1,6 +1,8 @@
-import React, { useContext, Fragment } from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+
 import Context from "../../context/Context";
-import { Cart } from "./Cart";
+import Cart from "./Cart";
 
 import "./checkout.scss";
 
@@ -8,7 +10,7 @@ const Checkouts = () => {
   const { carts, removeCart } = useContext(Context);
   let price = carts.reduce((result, prd) => result + prd.price, 0);
   return (
-    <div className="checkouts">
+    <div className="checkouts container">
       <div className="header">
         <div className="left">
           <h1>Banner</h1>
@@ -21,7 +23,9 @@ const Checkouts = () => {
             SubTotal ({carts.length}) : <b>${price}</b>
           </p>
           <input type="checkbox" /> <p>This order contains a gift</p>
-          <button>Proceed to Checkout</button>
+          <Link to="/payment" className="button">
+            Proceed to Checkout
+          </Link>
         </div>
       </div>
       <div className="cart-items">

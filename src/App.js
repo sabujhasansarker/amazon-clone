@@ -9,6 +9,7 @@ import Products from "./components/products/Products";
 import Checkouts from "./components/checkout/Checkouts";
 import Alert from "./components/layout/Alert";
 import Login from "./components/auth/Login";
+import Payment from "./components/checkout/Payment";
 
 const App = () => {
   const { getData, msg } = useContext(Context);
@@ -16,19 +17,16 @@ const App = () => {
   useEffect(() => {
     getData();
   }, []);
-  console.log(msg);
   return (
     <Router>
       <NavBar />
-      <div className="container">
-        <Switch>
-          <Route exact path="/" component={Products} />
-          <Route exact path="/checkout" component={Checkouts} />
-          <Route exact path="/login" component={Login} />
-        </Switch>
-        {msg &&
-          msg.map((m, index) => <Alert msg={m} index={index} key={m.id} />)}
-      </div>
+      <Switch>
+        <Route exact path="/" component={Products} />
+        <Route exact path="/checkout" component={Checkouts} />
+        <Route exact path="/payment" component={Payment} />
+        <Route exact path="/login" component={Login} />
+      </Switch>
+      {msg && msg.map((m, index) => <Alert msg={m} index={index} key={m.id} />)}
     </Router>
   );
 };

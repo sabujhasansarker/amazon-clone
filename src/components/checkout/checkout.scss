@@ -17,27 +17,66 @@
       }
     }
   }
-  .cart {
+}
+
+.checkouts .cart,
+.payment .cart {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 20px;
+  img {
+    width: 150px;
+    margin-right: 35px;
+  }
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  .price {
+    margin: 5px 0px 10px;
+    span {
+      font-size: 0.6rem;
+    }
+  }
+  .button,
+  button {
+    margin-top: 0;
+  }
+}
+
+.payment {
+  padding-bottom: 50px;
+  h1 {
+    background: white;
+    padding: 10px;
+    margin: 0;
+  }
+  .delivery-address {
     display: flex;
     align-items: center;
-    width: 50%;
-    margin-bottom: 20px;
-    img {
-      width: 150px;
-      margin-right: 35px;
-    }
     p {
+      margin-left: 40px;
+    }
+  }
+  .payment-method {
+    display: flex;
+    h4 {
+      margin-top: 50px;
+    }
+    form {
+      width: 400px;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    .error {
+      background: red;
+      text-align: center;
+      padding: 5px;
+      border-radius: 3px;
       margin: 0;
-      line-height: 1.5;
-    }
-    .price {
-      margin: 5px 0px 10px;
-      span {
-        font-size: 0.6rem;
-      }
-    }
-    button {
-      margin-top: 0;
+      transition: 1s all;
+      margin-top: 10px;
     }
   }
 }

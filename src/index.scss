@@ -14,11 +14,21 @@ body {
   margin: 0 auto;
 }
 
-button {
+button,
+.button {
   margin-top: 30px;
   background: $F3A847;
   border: 0;
   padding: 10px 10px;
   border-radius: 2px;
   cursor: pointer;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
 }
